@@ -7,9 +7,9 @@
 import torch.nn as nn
 
 class VGG(nn.Module):
-    def __init__(self,features)
+    def __init__(self,features):
         super(VGG,self).__init__()
-        self.features=features#cnn?
+        self.features=features#cnn
         self.classifiar=nn.Sequential(
             nn.Linear(4096,4096),
             nn.ReLU()
