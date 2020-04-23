@@ -12,9 +12,9 @@ class VGG(nn.Module):
         self.features=features#cnn
         self.classifiar=nn.Sequential(
             nn.Linear(4096,4096),
-            nn.ReLU()
+            nn.ReLU(),
             nn.Linear(4096,1000),
-            nn.ReLU()
+            nn.ReLU(),
             nn.Linear(1000,10)
         )
     def forward(self,x):
